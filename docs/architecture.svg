@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="830" viewBox="0 0 1100 830"
+     font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif">
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0078D4"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C07800"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#107C10"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#464775"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7719AA"/>
+    </marker>
+  </defs>
+
+  <!-- ── Background ────────────────────────────────────────────────── -->
+  <rect width="1100" height="830" fill="#F8F9FA"/>
+
+  <!-- ── Page title ─────────────────────────────────────────────────── -->
+  <text x="550" y="18" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A1A1A">
+    Azure AI Agent Architecture — Microsoft Fabric + Azure AI Search + Teams / Copilot
+  </text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       MICROSOFT FABRIC / ONELAKE CONTAINER
+       ════════════════════════════════════════════════════════════════ -->
+  <rect x="20" y="25" width="1060" height="232" rx="12"
+        fill="#EBF3FB" stroke="#0078D4" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="550" y="46" text-anchor="middle" font-size="14" font-weight="bold" fill="#0078D4">
+    &#x2601;  Microsoft Fabric / OneLake
+  </text>
+
+  <!-- Structured Data sub-box -->
+  <rect x="40" y="55" width="440" height="188" rx="8"
+        fill="#D0E8F8" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="260" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#003F6C">
+    &#x1F4CA;  Structured Data
+  </text>
+  <line x1="58" y1="87" x2="462" y2="87" stroke="#0078D4" stroke-width="0.6" opacity="0.5"/>
+  <text x="260" y="106" text-anchor="middle" font-size="11" fill="#003F6C">Lakehouse  &#xB7;  Data Warehouse</text>
+  <text x="260" y="124" text-anchor="middle" font-size="11" fill="#003F6C">Semantic Model  &#xB7;  KQL Database</text>
+  <text x="260" y="142" text-anchor="middle" font-size="11" fill="#003F6C">Real-time Eventstream  &#xB7;  Data Pipelines</text>
+  <rect x="62" y="158" width="396" height="26" rx="4" fill="#0078D4" fill-opacity="0.12"/>
+  <text x="260" y="176" text-anchor="middle" font-size="10.5" fill="#004B8A" font-weight="600">
+    &#x2192;  Direct query to agent  (no ETL needed)
+  </text>
+  <text x="260" y="228" text-anchor="middle" font-size="10" fill="#005A9E" font-style="italic">
+    Generally Available in Microsoft Fabric
+  </text>
+
+  <!-- Unstructured Data sub-box -->
+  <rect x="620" y="55" width="440" height="188" rx="8"
+        fill="#D0E8F8" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="840" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#003F6C">
+    &#x1F4C4;  Unstructured Data
+  </text>
+  <line x1="638" y1="87" x2="1042" y2="87" stroke="#0078D4" stroke-width="0.6" opacity="0.5"/>
+  <text x="840" y="106" text-anchor="middle" font-size="11" fill="#003F6C">Files  &#xB7;  Docs  &#xB7;  PDFs  &#xB7;  Blobs</text>
+  <text x="840" y="124" text-anchor="middle" font-size="11" fill="#003F6C">JSON  &#xB7;  CSV  &#xB7;  Images</text>
+  <text x="840" y="142" text-anchor="middle" font-size="11" fill="#003F6C">SharePoint  &#xB7;  ADLS  &#xB7;  OneLake Files</text>
+  <rect x="642" y="158" width="396" height="26" rx="4" fill="#0078D4" fill-opacity="0.12"/>
+  <text x="840" y="176" text-anchor="middle" font-size="10.5" fill="#004B8A" font-weight="600">
+    &#x2192;  Indexed via OneLake Indexer  (GA)
+  </text>
+  <text x="840" y="228" text-anchor="middle" font-size="10" fill="#005A9E" font-style="italic">
+    Read in-place — no data copy required
+  </text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       AZURE AI SEARCH
+       ════════════════════════════════════════════════════════════════ -->
+  <rect x="730" y="308" width="350" height="150" rx="8"
+        fill="#FFF4CE" stroke="#F4A01C" stroke-width="2"/>
+  <text x="905" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#7A4F00">
+    &#x1F50D;  Azure AI Search
+  </text>
+  <line x1="748" y1="339" x2="1062" y2="339" stroke="#F4A01C" stroke-width="0.6" opacity="0.5"/>
+  <text x="905" y="358" text-anchor="middle" font-size="11" fill="#7A4F00">Vector + Semantic Index</text>
+  <text x="905" y="375" text-anchor="middle" font-size="11" fill="#7A4F00">Hybrid Retrieval  &#xB7;  Skills Pipeline</text>
+  <text x="905" y="392" text-anchor="middle" font-size="11" fill="#7A4F00">Knowledge Store  &#xB7;  Reranking</text>
+  <text x="905" y="409" text-anchor="middle" font-size="10" fill="#7A4F00" font-style="italic">Chunking + Embeddings  &#xB7;  Filters</text>
+  <text x="905" y="445" text-anchor="middle" font-size="10" fill="#B07000" font-style="italic">OneLake Indexer reads files in-place</text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FABRIC DATA AGENT
+       ════════════════════════════════════════════════════════════════ -->
+  <rect x="60" y="308" width="620" height="150" rx="8"
+        fill="#DFF6DD" stroke="#107C10" stroke-width="2"/>
+  <text x="370" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#0A4A0A">
+    &#x1F916;  Fabric Data Agent  (GA)
+  </text>
+  <line x1="78" y1="339" x2="662" y2="339" stroke="#107C10" stroke-width="0.6" opacity="0.5"/>
+  <text x="370" y="358" text-anchor="middle" font-size="11" fill="#0A4A0A">NL Q&amp;A  &#xB7;  Tool Calling  &#xB7;  Memory  &#xB7;  State</text>
+  <text x="370" y="375" text-anchor="middle" font-size="11" fill="#0A4A0A">Reasons over structured + unstructured data together</text>
+  <text x="370" y="392" text-anchor="middle" font-size="10" fill="#0A4A0A" font-style="italic">Orchestrator: Semantic Kernel  &#xB7;  AutoGen  &#xB7;  Azure AI Foundry</text>
+  <text x="370" y="409" text-anchor="middle" font-size="10" fill="#0A4A0A" font-style="italic">LLM: Azure OpenAI GPT-4o  &#xB7;  Anthropic Claude</text>
+  <text x="370" y="426" text-anchor="middle" font-size="10" fill="#0A4A0A" font-style="italic">State: Cosmos DB  &#xB7;  Redis Cache  &#xB7;  Conversation Log</text>
+  <text x="370" y="443" text-anchor="middle" font-size="10" fill="#0A4A0A" font-style="italic">AI Skills (Preview)  &#xB7;  Copilot for Fabric (GA)</text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       INTEGRATION LAYER
+       ════════════════════════════════════════════════════════════════ -->
+
+  <!-- MS Teams -->
+  <rect x="20" y="524" width="290" height="138" rx="8"
+        fill="#EDECF4" stroke="#464775" stroke-width="2"/>
+  <text x="165" y="548" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D2C5E">
+    &#x1F4AC;  Microsoft Teams
+  </text>
+  <line x1="38" y1="555" x2="292" y2="555" stroke="#464775" stroke-width="0.6" opacity="0.5"/>
+  <text x="165" y="573" text-anchor="middle" font-size="11" fill="#2D2C5E">Bot Framework SDK  v4</text>
+  <text x="165" y="590" text-anchor="middle" font-size="11" fill="#2D2C5E">Adaptive Cards</text>
+  <text x="165" y="607" text-anchor="middle" font-size="11" fill="#2D2C5E">Proactive Messages</text>
+  <text x="165" y="624" text-anchor="middle" font-size="10" fill="#2D2C5E" font-style="italic">Channel  &#xB7;  Group DM  &#xB7;  1:1</text>
+  <text x="165" y="651" text-anchor="middle" font-size="10" fill="#2D2C5E" font-style="italic">Messaging Extension</text>
+
+  <!-- M365 Copilot -->
+  <rect x="405" y="524" width="290" height="138" rx="8"
+        fill="#EDECF4" stroke="#464775" stroke-width="2"/>
+  <text x="550" y="548" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D2C5E">
+    &#x1FA84;  M365 Copilot
+  </text>
+  <line x1="423" y1="555" x2="677" y2="555" stroke="#464775" stroke-width="0.6" opacity="0.5"/>
+  <text x="550" y="573" text-anchor="middle" font-size="11" fill="#2D2C5E">Word  &#xB7;  Excel  &#xB7;  Outlook</text>
+  <text x="550" y="590" text-anchor="middle" font-size="11" fill="#2D2C5E">Teams Copilot Plugin</text>
+  <text x="550" y="607" text-anchor="middle" font-size="10" fill="#2D2C5E" font-style="italic">Graph Connector indexes OneLake</text>
+  <text x="550" y="624" text-anchor="middle" font-size="10" fill="#2D2C5E" font-style="italic">Declarative Copilot Agent</text>
+
+  <!-- Copilot Studio -->
+  <rect x="790" y="524" width="290" height="138" rx="8"
+        fill="#EDECF4" stroke="#464775" stroke-width="2"/>
+  <text x="935" y="548" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D2C5E">
+    &#x1F6E0;  Copilot Studio
+  </text>
+  <line x1="808" y1="555" x2="1062" y2="555" stroke="#464775" stroke-width="0.6" opacity="0.5"/>
+  <text x="935" y="573" text-anchor="middle" font-size="11" fill="#2D2C5E">Declarative Agent Wrapper</text>
+  <text x="935" y="590" text-anchor="middle" font-size="11" fill="#2D2C5E">Custom Connector</text>
+  <text x="935" y="607" text-anchor="middle" font-size="11" fill="#2D2C5E">OpenAPI Action</text>
+  <text x="935" y="624" text-anchor="middle" font-size="10" fill="#2D2C5E" font-style="italic">Low-code agent builder</text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       MICROSOFT ENTRA ID
+       ════════════════════════════════════════════════════════════════ -->
+  <rect x="300" y="714" width="500" height="82" rx="8"
+        fill="#F0E6FF" stroke="#7719AA" stroke-width="2"/>
+  <text x="550" y="740" text-anchor="middle" font-size="13" font-weight="bold" fill="#4B0082">
+    &#x1F510;  Microsoft Entra ID
+  </text>
+  <text x="550" y="760" text-anchor="middle" font-size="11" fill="#4B0082">
+    OAuth 2.0  &#xB7;  On-Behalf-Of (OBO) Flow  &#xB7;  Managed Identity
+  </text>
+  <text x="550" y="778" text-anchor="middle" font-size="10" fill="#4B0082" font-style="italic">
+    SSO for Teams &amp; Copilot  &#xB7;  Service-to-service auth
+  </text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       ARROWS
+       ════════════════════════════════════════════════════════════════ -->
+
+  <!-- 1. Structured Data bottom-center → Fabric Data Agent top (Direct query) -->
+  <path d="M 260,243 C 260,276 210,295 210,308"
+        fill="none" stroke="#0078D4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <rect x="148" y="258" width="112" height="34" rx="4" fill="white" opacity="0.88"/>
+  <text x="204" y="272" text-anchor="middle" font-size="9" fill="#0055A5" font-weight="bold">Direct query</text>
+  <text x="204" y="285" text-anchor="middle" font-size="9" fill="#0055A5">(structured data)</text>
+
+  <!-- 2. Unstructured Data bottom-center → Azure AI Search top (OneLake Indexer) -->
+  <path d="M 840,243 C 840,276 900,295 905,308"
+        fill="none" stroke="#C07800" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <rect x="788" y="258" width="118" height="34" rx="4" fill="white" opacity="0.88"/>
+  <text x="847" y="272" text-anchor="middle" font-size="9" fill="#7A4F00" font-weight="bold">OneLake Indexer</text>
+  <text x="847" y="285" text-anchor="middle" font-size="9" fill="#7A4F00">(GA — in-place)</text>
+
+  <!-- 3. Azure AI Search left → Fabric Data Agent right (RAG retrieval) -->
+  <path d="M 730,383 L 682,383"
+        fill="none" stroke="#107C10" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="684" y="368" width="44" height="30" rx="4" fill="white" opacity="0.88"/>
+  <text x="706" y="381" text-anchor="middle" font-size="9" fill="#107C10" font-weight="bold">RAG</text>
+  <text x="706" y="393" text-anchor="middle" font-size="9" fill="#107C10">retrieval</text>
+
+  <!-- 4. Agent bottom-left → MS Teams top -->
+  <path d="M 200,458 C 200,493 165,508 165,524"
+        fill="none" stroke="#464775" stroke-width="1.8" marker-end="url(#arrowGray)"/>
+
+  <!-- 5. Agent bottom-center → M365 Copilot top -->
+  <path d="M 370,458 C 370,493 550,508 550,524"
+        fill="none" stroke="#464775" stroke-width="1.8" marker-end="url(#arrowGray)"/>
+
+  <!-- 6. Agent bottom-right → Copilot Studio top -->
+  <path d="M 570,458 C 570,493 935,508 935,524"
+        fill="none" stroke="#464775" stroke-width="1.8" marker-end="url(#arrowGray)"/>
+
+  <!-- 7. MS Teams bottom → Entra ID (auth — dashed) -->
+  <path d="M 165,662 C 165,688 360,714 370,714"
+        fill="none" stroke="#7719AA" stroke-width="1.5" stroke-dasharray="5,3"
+        marker-end="url(#arrowPurple)"/>
+
+  <!-- 8. M365 Copilot bottom → Entra ID (auth — dashed) -->
+  <path d="M 550,662 L 550,714"
+        fill="none" stroke="#7719AA" stroke-width="1.5" stroke-dasharray="5,3"
+        marker-end="url(#arrowPurple)"/>
+
+  <!-- Auth flow label -->
+  <text x="285" y="693" font-size="9" fill="#7719AA" font-style="italic">Auth / Identity</text>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       LEGEND
+       ════════════════════════════════════════════════════════════════ -->
+  <rect x="20" y="803" width="1060" height="22" rx="4" fill="#E4E4E4" opacity="0.75"/>
+  <text x="550" y="818" text-anchor="middle" font-size="9" fill="#444">
+    Solid lines = data / query flow  &#xB7;  Dashed lines = auth flow  &#xB7;  Fabric Data Agent: GA  &#xB7;  AI Skills: Public Preview  &#xB7;  Azure AI Search OneLake Indexer: GA (REST API 2025-09-01)
+  </text>
+
+</svg>
